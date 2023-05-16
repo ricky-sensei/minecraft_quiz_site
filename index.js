@@ -23,8 +23,6 @@ document.getElementById("js-question").textContent = question;
 // 正確にはシャローコピーなので、buttonsの要素への変更がそのままdocument___の変更になる。''
 let buttons = Array.from(document.getElementsByTagName("button"))
 
-
-
 let index = 0;
 buttons.forEach(bt => {
     bt.textContent = answers[index];
@@ -37,7 +35,6 @@ buttons.forEach(bt => {
         if (e.target.textContent === correct) {
             window.alert("正解");
         }else{
-            
             window.alert("不正解");
         }
     })
